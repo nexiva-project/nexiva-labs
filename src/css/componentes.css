@@ -1,8 +1,8 @@
 /* Componentes: painel, ícone, selo e barra de progresso */
 .panel {
   display: none;
-  width: min(1024px, 100%);
-  height: min(640px, 100%);
+  width: min(90%);
+  height: min(90%);
   padding: 100px 48px;
   text-align: center;
   border-radius: 24px;
@@ -12,6 +12,7 @@
   border: 1px solid var(--line);
   box-shadow: 0 24px 60px -34px rgba(70, 70, 70, 0.9);
   animation: in 0.5s ease both;
+  opacity: 90%;
 }
 .panel.active {
   display: block;
@@ -38,9 +39,10 @@
   text-transform: uppercase;
   color: var(--muted);
   padding: 0 14px 8px;
+  display: none;
 }
 .kicker {
-  font-size: 12px;
+  font-size: 13px;
   letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--muted);

@@ -9,8 +9,9 @@
 .sidebar {
   box-shadow: 0 24px 60px -36px rgba(70, 70, 70, 0.9);
   margin: 16px;
+  width: min(100%);
   padding: 26px 18px 20px;
-  border-radius: 22px;
+  border-radius: 20px;
   background: var(--surface);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
