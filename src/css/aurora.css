@@ -1,0 +1,152 @@
+/* Aurora: faixas prateadas + manchas azul e roxo */
+.stage {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background: linear-gradient(160deg, var(--bg2), var(--bg));
+}
+.ribbon {
+  position: absolute;
+  width: 90vmax;
+  height: 22vmax;
+  border-radius: 50%;
+  filter: blur(44px);
+  opacity: 0.9;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--r1),
+    var(--r2),
+    transparent
+  );
+  animation: flow 26s ease-in-out infinite alternate;
+}
+.r1 {
+  left: -22vmax;
+  top: 4vh;
+  rotate: -12deg;
+}
+.r2 {
+  right: -28vmax;
+  top: 40vh;
+  rotate: 10deg;
+  animation-duration: 32s;
+  animation-delay: -9s;
+}
+.r3 {
+  left: 8vmax;
+  bottom: -8vh;
+  rotate: -6deg;
+  animation-duration: 38s;
+  animation-delay: -16s;
+}
+.aur {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.6;
+  will-change: transform;
+}
+.a1 {
+  width: 46vmax;
+  height: 34vmax;
+  left: -8vmax;
+  top: -10vmax;
+  background: radial-gradient(
+    closest-side,
+    rgba(120, 160, 255, 0.85),
+    rgba(204, 14, 14, 0)
+  );
+  animation: w1 28s ease-in-out infinite;
+}
+.a2 {
+  width: 42vmax;
+  height: 32vmax;
+  right: -8vmax;
+  top: 6vmax;
+  background: radial-gradient(
+    closest-side,
+    rgba(172, 142, 255, 0.8),
+    rgba(172, 142, 255, 0)
+  );
+  animation: w2 34s ease-in-out infinite;
+}
+.a3 {
+  width: 40vmax;
+  height: 30vmax;
+  left: 20vmax;
+  bottom: -12vmax;
+  background: radial-gradient(
+    closest-side,
+    rgba(70, 100, 235, 0.55),
+    rgba(70, 100, 235, 0)
+  );
+  animation: w3 40s ease-in-out infinite;
+}
+.a4 {
+  width: 34vmax;
+  height: 26vmax;
+  right: 14vmax;
+  bottom: -8vmax;
+  background: radial-gradient(
+    closest-side,
+    rgba(122, 82, 218, 0.45),
+    rgba(122, 82, 218, 0)
+  );
+  animation: w4 46s ease-in-out infinite;
+}
+@keyframes w1 {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30vmax, 12vmax) scale(1.15);
+  }
+  66% {
+    transform: translate(12vmax, 28vmax) scale(0.95);
+  }
+}
+@keyframes w2 {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(-26vmax, 18vmax) scale(1.1);
+  }
+  66% {
+    transform: translate(-8vmax, 34vmax) scale(0.92);
+  }
+}
+@keyframes w3 {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(-24vmax, -16vmax) scale(1.12);
+  }
+  66% {
+    transform: translate(18vmax, -24vmax) scale(1);
+  }
+}
+@keyframes w4 {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(22vmax, -20vmax) scale(1.05);
+  }
+  66% {
+    transform: translate(-30vmax, -8vmax) scale(1.1);
+  }
+}
+@keyframes flow {
+  to {
+    transform: translate(8vmax, -4vmax) scale(1.08);
+  }
+}
