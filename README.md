@@ -27,9 +27,9 @@ src/js/
   main.js             ponto de entrada
   navegacao.js        troca de seção pela sidebar
 public/assets/img/    imagens e logo (coloque a logo aqui)
+public/favicon.svg    ícone exibido na aba do navegador
 ```
 
 ## Estado atual
 
 Sobre, Mídia e Contato estão "em manutenção".
-# nexiva-labs

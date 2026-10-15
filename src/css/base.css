@@ -1,0 +1,42 @@
+/* Base: variáveis de cor, reset e corpo da página */
+:root {
+  --bg: #bba9e4;
+  --bg2: #ebe7e7;
+  --surface: rgba(255, 255, 255, 0.8);
+  --line: rgba(0, 0, 0, 0.08);
+  --text: rgb(0, 0, 0);
+  --muted: rgba(0, 0, 0, 0.801);
+  --accent: rgb(127, 147, 173);
+  --r1: rgba(233, 216, 216, 0.55);
+  --r2: rgba(238, 241, 247, 0.9);
+  color-scheme: light;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+html {
+  scroll-padding-top: env(safe-area-inset-top, 0px);
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Manrope, system-ui, sans-serif;
+  overflow: hidden;
+}
+
+/* Acessibilidade: sem animação para quem prefere */
+@media (prefers-reduced-motion: reduce) {
+  .ribbon,
+  .aur,
+  .bar::after {
+    animation: none;
+  }
+}
