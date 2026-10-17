@@ -7,12 +7,31 @@
   --text: rgb(0, 0, 0);
   --muted: rgba(0, 0, 0, 0.801);
   --accent: rgb(127, 147, 173);
+  --fill: rgba(127, 147, 173, 0.14);
+  --fill-strong: rgba(127, 147, 173, 0.16);
+  --shadow: 0 24px 60px -36px rgba(70, 70, 70, 0.9);
   --r1: rgba(233, 216, 216, 0.55);
   --r2: rgba(238, 241, 247, 0.9);
   color-scheme: light;
   box-sizing: border-box;
   padding-top: env(safe-area-inset-top, 0px);
   padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+html[data-tema='escuro'] {
+  --bg: #16122a;
+  --bg2: #0c0a16;
+  --surface: rgba(22, 20, 34, 0.78);
+  --line: rgba(255, 255, 255, 0.12);
+  --text: rgb(244, 241, 250);
+  --muted: rgba(230, 226, 240, 0.72);
+  --accent: rgb(176, 194, 218);
+  --fill: rgba(176, 194, 218, 0.12);
+  --fill-strong: rgba(176, 194, 218, 0.2);
+  --shadow: 0 24px 60px -32px rgba(0, 0, 0, 0.85);
+  --r1: rgba(90, 70, 130, 0.45);
+  --r2: rgba(40, 48, 90, 0.55);
+  color-scheme: dark;
 }
 * {
   box-sizing: border-box;

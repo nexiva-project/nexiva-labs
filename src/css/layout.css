@@ -7,7 +7,7 @@
   height: 100%;
 }
 .sidebar {
-  box-shadow: 0 24px 60px -36px rgba(70, 70, 70, 0.9);
+  box-shadow: var(--shadow);
   margin: 16px;
   width: min(100%);
   padding: 26px 18px 20px;
@@ -19,6 +19,12 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+.sidebar-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
 }
 .brand {
   line-height: 1.1;
@@ -66,11 +72,11 @@ nav button::before {
   transition: background 0.25s;
 }
 nav button:hover {
-  background: rgba(127, 147, 173, 0.1);
+  background: var(--fill);
   color: var(--text);
 }
 nav button[aria-current='page'] {
-  background: rgba(127, 147, 173, 0.16);
+  background: var(--fill-strong);
   color: var(--text);
 }
 nav button[aria-current='page']::before {
@@ -88,6 +94,39 @@ nav button:focus-visible {
   font-size: 14px;
   color: var(--muted);
   line-height: 1.5;
+}
+
+.tema-btn {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--fill);
+  color: var(--accent);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition:
+    background 0.25s,
+    color 0.25s;
+}
+.tema-btn:hover {
+  background: var(--fill-strong);
+  color: var(--text);
+}
+.tema-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.tema-btn .icon-sol {
+  display: none;
+}
+html[data-tema='escuro'] .tema-btn .icon-lua {
+  display: none;
+}
+html[data-tema='escuro'] .tema-btn .icon-sol {
+  display: block;
 }
 
 main {
